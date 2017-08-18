@@ -11,4 +11,8 @@ public class DescontoEstudante implements Desconto {
 		return precoOriginal.divide(metade);
 	}
 
+	@Override
+	public String getDescricao() {
+		return "Estudante";
+	}
 }

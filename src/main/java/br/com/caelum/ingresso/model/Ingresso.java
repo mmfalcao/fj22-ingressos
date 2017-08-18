@@ -8,7 +8,12 @@ public class Ingresso {
 
 	private Sessao sessao;
 	private BigDecimal preco;
+	private Lugar lugar;
 	
+	public Lugar getLugar() {
+		return lugar;
+	}
+
 	public Sessao getSessao() {
 		return sessao;
 	}
@@ -24,8 +29,9 @@ public class Ingresso {
 		
 	}
 	
-	public Ingresso(Sessao sessao, Desconto tipoDeDesconto) {
+	public Ingresso(Sessao sessao, Desconto tipoDeDesconto, Lugar lugar) {
 		this.sessao = sessao;
 		this.preco = tipoDeDesconto.aplicarDescontoSobre(sessao.getPreco());
+		this.lugar = lugar;
 	}
 }
